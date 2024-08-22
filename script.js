@@ -1,13 +1,14 @@
+// Seleciona todos os itens do carrossel e os botões de navegação
 let list = document.querySelectorAll('.item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 
-let count = list.length;
-let active = 0;
+let count = list.length; // Número total de itens
+let active = 0; // Índice do item ativo
 
-// Função para atualizar a classe ativa
+// Função para atualizar o item ativo
 function updateActiveItem() {
-    let activeOld = document.querySelector('.active');
+    let activeOld = document.querySelector('.item.active');
     if (activeOld) {
         activeOld.classList.remove('active');
     }
@@ -26,5 +27,5 @@ prev.onclick = () => {
     updateActiveItem();
 }
 
-// Inicialmente, exiba o primeiro item
+// Inicialmente, exibe o primeiro item
 updateActiveItem();
